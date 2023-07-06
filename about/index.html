@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>我的技术与生活——小站首页 | MY LIFE</title>
+  <title>我的技术与生活——about | MY LIFE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" href="/imgs/shortcut-icon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/public.css" />
@@ -16,7 +16,7 @@
 
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <script>
-    document.title = `我的技术与生活——小站首页`
+    document.title = `我的技术与生活——about`
   </script>
 <meta name="generator" content="Hexo 6.3.0"></head>
 
@@ -346,97 +346,42 @@
 </div></div>
       <div id="main-container" class="main-container">
 
-<div class="index">
-  <div class="index-left">
-    
-      <div class="index-article">
-        <!-- <img class="index-article--cover" src="/imgs/default-cover.webp" alt=""> -->
-        <div class="index-article--box">
-          <img class="index-article--cover" data-cover="imgs/default-cover.webp" alt="">
-        </div>
-        <div class="index-article--content">
-          <a href="/2023/07/05/my-first-blog/">我的第一个博客 </a>
-          <div>
-            
-            
-          </div>
-          <div class="bg"></div>
-        </div>
-      </div>
-    
-  </div>
-  <div class="index-center">
-    
-  </div>
-  <div class="index-right">
-    <div class="index-right-wrapper">
-      
-      
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">2023年07月</a><span class="archive-list-count">1</span></li></ul>
+
+  <div class="about">
+  <div class="about-top">
+    <div class="about-title">
+      <h2>关于我</h2>
     </div>
+    <div class="about-info">
+      <img class="about-avatar" src="/imgs/avatar.jpg" alt="">
+      <div class="about-detail">
+        
+          <p>姓名：蒋志通</p>
+        
+          <p>年龄：19</p>
+        
+          <p>性别：♂</p>
+        
+          <p>家乡：河北省邯郸市某小镇</p>
+        
+          <p>现居住地：河北省邯郸市某小镇</p>
+        
+          <p>职业：学生</p>
+        
+          <p>喜欢：打游戏，滑板</p>
+        
+      </div>
+    </div>
+  </div>
+  <div class="about-content">
+    
   </div>
 </div>
 
+<script src="http://cdn.yangxiang.cc/prism.js"></script>
 
-<script>
-  var allImgBoxs = document.querySelectorAll('.index-article--box');
-  var windowHeight = window.innerHeight;
-  var boxs = Array.from(allImgBoxs);
-  var timer = null;
-  boxs.forEach((box, idx) => {
-    if (!window.loadImageSet || !window.loadImageSet.includes(idx)) {
-      box.classList.add('img-loading');
-    } else {
-      const imgDom = box.querySelector('img');
-      imgDom.src = imgDom.dataset.cover;
-    }
-  });
 
-  function scrollFn() {
-    if (timer) {
-      return;
-    }
-    timer = setTimeout(() => {
-      loadImage();
-      timer = null;
-    }, 100)
-  }
-
-  if (!window.loadedImage) {
-    document.addEventListener('scroll', scrollFn);
-  }
-
-  function loadImage() {
-    const doc = document.documentElement;
-    const scrollTop = doc.scrollTop;
-    if (boxs.every(box => box.loadedImage)) {
-      document.removeEventListener('scroll', scrollFn);
-      window.loadedImage = 1;
-      return;
-    }
-    boxs.forEach((box, idx) => {
-      if (box.loadedImage) {
-        return;
-      }
-      if (box.getBoundingClientRect().top < windowHeight) {
-        const imgDom = box.querySelector('img');
-        imgDom.src = imgDom.dataset.cover;
-        imgDom.onload = () => {
-          box.classList.remove('img-loading')
-          box.loadedImage = true;
-          if (window.loadImageSet) {
-            window.loadImageSet.push(idx);
-          } else {
-            window.loadImageSet = [];
-            window.loadImageSet.push(idx);
-          }
-        }
-      }
-    });
-  }
-
-  window.loadImageFn = loadImage;
-</script> </div>
+</div>
       <div class="main-right-wrapper"><div class="main-right">
   <div class="main-right--board">
     <div class="main-right--title">

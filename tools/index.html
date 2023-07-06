@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>我的技术与生活——小站首页 | MY LIFE</title>
+  <title>我的技术与生活——tools | MY LIFE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" href="/imgs/shortcut-icon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/public.css" />
@@ -16,7 +16,7 @@
 
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <script>
-    document.title = `我的技术与生活——小站首页`
+    document.title = `我的技术与生活——tools`
   </script>
 <meta name="generator" content="Hexo 6.3.0"></head>
 
@@ -346,97 +346,40 @@
 </div></div>
       <div id="main-container" class="main-container">
 
-<div class="index">
-  <div class="index-left">
+
+  
+
+<div class="tools">
+  <h2 class="tools-title">我的自制工具列表...</h2>
+  <ul class="tools-list">
     
-      <div class="index-article">
-        <!-- <img class="index-article--cover" src="/imgs/default-cover.webp" alt=""> -->
-        <div class="index-article--box">
-          <img class="index-article--cover" data-cover="imgs/default-cover.webp" alt="">
-        </div>
-        <div class="index-article--content">
-          <a href="/2023/07/05/my-first-blog/">我的第一个博客 </a>
+      <li>
+        <img class="tool-cover" src="/imgs/sky.png" alt="">
+        <div class="tool-info">
           <div>
-            
-            
+            <p class="tool-title">恋爱计时</p>
+            <p class="tool-intro">用于恋爱时间的记录</p>
           </div>
-          <div class="bg"></div>
+          <a class="tool-link" href="https://jandj0611.github.io/Jzt.github.io/" target="_blank">前往使用>></a>
         </div>
-      </div>
+      </li>
     
-  </div>
-  <div class="index-center">
+      <li>
+        <img class="tool-cover" src="/imgs/%E7%94%A8%E6%88%B7%E8%84%9A%E6%9C%AC.png" alt="">
+        <div class="tool-info">
+          <div>
+            <p class="tool-title">用户脚本</p>
+            <p class="tool-intro">各种油猴脚本分享</p>
+          </div>
+          <a class="tool-link" href="https://greasyfork.org/zh-CN/scripts" target="_blank">前往使用>></a>
+        </div>
+      </li>
     
-  </div>
-  <div class="index-right">
-    <div class="index-right-wrapper">
-      
-      
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">2023年07月</a><span class="archive-list-count">1</span></li></ul>
-    </div>
-  </div>
+  </ul>
 </div>
 
 
-<script>
-  var allImgBoxs = document.querySelectorAll('.index-article--box');
-  var windowHeight = window.innerHeight;
-  var boxs = Array.from(allImgBoxs);
-  var timer = null;
-  boxs.forEach((box, idx) => {
-    if (!window.loadImageSet || !window.loadImageSet.includes(idx)) {
-      box.classList.add('img-loading');
-    } else {
-      const imgDom = box.querySelector('img');
-      imgDom.src = imgDom.dataset.cover;
-    }
-  });
-
-  function scrollFn() {
-    if (timer) {
-      return;
-    }
-    timer = setTimeout(() => {
-      loadImage();
-      timer = null;
-    }, 100)
-  }
-
-  if (!window.loadedImage) {
-    document.addEventListener('scroll', scrollFn);
-  }
-
-  function loadImage() {
-    const doc = document.documentElement;
-    const scrollTop = doc.scrollTop;
-    if (boxs.every(box => box.loadedImage)) {
-      document.removeEventListener('scroll', scrollFn);
-      window.loadedImage = 1;
-      return;
-    }
-    boxs.forEach((box, idx) => {
-      if (box.loadedImage) {
-        return;
-      }
-      if (box.getBoundingClientRect().top < windowHeight) {
-        const imgDom = box.querySelector('img');
-        imgDom.src = imgDom.dataset.cover;
-        imgDom.onload = () => {
-          box.classList.remove('img-loading')
-          box.loadedImage = true;
-          if (window.loadImageSet) {
-            window.loadImageSet.push(idx);
-          } else {
-            window.loadImageSet = [];
-            window.loadImageSet.push(idx);
-          }
-        }
-      }
-    });
-  }
-
-  window.loadImageFn = loadImage;
-</script> </div>
+</div>
       <div class="main-right-wrapper"><div class="main-right">
   <div class="main-right--board">
     <div class="main-right--title">
