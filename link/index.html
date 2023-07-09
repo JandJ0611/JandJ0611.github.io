@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>我的技术与生活——link | MY LIFE</title>
+  <title>我的生活——link | MY LIFE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" href="/imgs/shortcut-icon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/public.css" />
@@ -16,7 +16,7 @@
 
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <script>
-    document.title = `我的技术与生活——link`
+    document.title = `我的生活——link`
   </script>
 <meta name="generator" content="Hexo 6.3.0"></head>
 
@@ -161,25 +161,25 @@
     <div class="header-right">
       <ul class="header-menu">
         <li>
-          <a href="http://example.com/">
+          <a href="/">
             <i class="header-menu--icon iconfont icon-shouye"></i>
             <span class="header-menu--span">首页</span>
           </a>
         </li>
         <li>
-          <a href="http://example.com/log">
+          <a href="/log">
             <i class="header-menu--icon iconfont icon-rizhi"></i>
             <span class="header-menu--span">日志</span>
           </a>
         </li>
         <li>
-          <a href="http://example.com/link">
+          <a href="/link">
             <i class="header-menu--icon iconfont icon-youqinglianjie"></i>
             <span class="header-menu--span">友情链接</span>
           </a>
         </li>
         <li>
-          <a href="http://example.com/about">
+          <a href="/about">
             <i class="header-menu--icon iconfont icon-guanyuwomen"></i>
             <span class="header-menu--span">关于我</span>
           </a>
@@ -193,7 +193,7 @@
   const ipt = document.querySelector('#search-input')
   const btn = document.querySelector('#search-btn')
   const layer = document.querySelector('#search-layer')
-  const posts = JSON.parse(`[{"title":"我的第一个博客","path":"2023/07/05/my-first-blog/"}]`)
+  const posts = JSON.parse(`[{"title":"我的第一个博客","path":"2023/07/05/my-first-blog/"},{"title":"滕王阁序","path":"2023/07/09/滕王阁序/"},{"title":"长恨歌","path":"2023/07/09/长恨歌/"}]`)
   ipt.addEventListener('keyup', e => {
     if (e.key === 'Enter') {
       handleSearch()
@@ -258,13 +258,13 @@
       <div class="main-left--statics">
         <a href="/categories">
           <div>
-            <span>1</span>
+            <span>2</span>
             <span>分类</span>
           </div>
         </a>
         <a href="/tags">
           <div>
-            <span>1</span>
+            <span>3</span>
             <span>标签</span>
           </div>
         </a>
@@ -327,19 +327,15 @@
       </h5>
       <p class="main-left--subtitle">
         <span>文章数目：</span>
-        <span>1 篇</span>
+        <span>3 篇</span>
       </p>
       <p class="main-left--subtitle">
         <span>最近动态：</span>
-        <span>2天前</span>
+        <span>今天</span>
       </p>
       <p class="main-left--subtitle">
         <span>上线时间：</span>
         <span>5天</span>
-      </p>
-      <p class="main-left--subtitle">
-        <span>当前版本：</span>
-        <span>v</span>
       </p>
     </div>
   </div>
