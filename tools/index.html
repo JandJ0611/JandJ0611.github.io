@@ -331,11 +331,11 @@
       </p>
       <p class="main-left--subtitle">
         <span>最近动态：</span>
-        <span>昨天</span>
+        <span>2天前</span>
       </p>
       <p class="main-left--subtitle">
         <span>上线时间：</span>
-        <span>4天</span>
+        <span>5天</span>
       </p>
       <p class="main-left--subtitle">
         <span>当前版本：</span>
@@ -358,20 +358,9 @@
         <div class="tool-info">
           <div>
             <p class="tool-title">恋爱计时</p>
-            <p class="tool-intro">用于恋爱时间的记录</p>
+            <p class="tool-intro">PS：源码文件github.com/JandJ0611/Jzt.github.io</p>
           </div>
           <a class="tool-link" href="https://jandj0611.github.io/Jzt.github.io/" target="_blank">前往使用>></a>
-        </div>
-      </li>
-    
-      <li>
-        <img class="tool-cover" src="/imgs/%E7%94%A8%E6%88%B7%E8%84%9A%E6%9C%AC.png" alt="">
-        <div class="tool-info">
-          <div>
-            <p class="tool-title">用户脚本</p>
-            <p class="tool-intro">各种油猴脚本分享</p>
-          </div>
-          <a class="tool-link" href="https://greasyfork.org/zh-CN/scripts" target="_blank">前往使用>></a>
         </div>
       </li>
     
@@ -441,7 +430,7 @@
   }
 
   setOperateItem()
-  const musics = JSON.parse(`[{"name":"你从未离去（2022新版）","artist":"白挺","url":"music/你从未离去(2022新版).mp3","cover":"/imgs/%E4%BD%A0%E4%BB%8E%E6%9C%AA%E7%A6%BB%E5%8E%BB2022.webp"},{"name":"你从未离去","artist":"白挺","url":"music/你从未离去.mp3","cover":"/imgs/%E4%BD%A0%E4%BB%8E%E6%9C%AA%E7%A6%BB%E5%8E%BB.webp"},{"name":"鹿 be free","artist":"尚雯婕","url":"music/鹿 be free.mp3","cover":"/imgs/%E9%B9%BF%20be%20free.webp"},{"name":"像小时候一样","artist":"郁可唯","url":"music/像小时候一样.mp3","cover":"/imgs/%E5%83%8F%E5%B0%8F%E6%97%B6%E5%80%99%E4%B8%80%E6%A0%B7.jpg"}]`)
+  const musics = JSON.parse(`[{"name":"你从未离去","artist":"白挺","url":"music/你从未离去.mp3","cover":"/imgs/%E4%BD%A0%E4%BB%8E%E6%9C%AA%E7%A6%BB%E5%8E%BB.webp"},{"name":"你从未离去（2022新版）","artist":"白挺","url":"music/你从未离去(2022新版).flac","cover":"/imgs/%E4%BD%A0%E4%BB%8E%E6%9C%AA%E7%A6%BB%E5%8E%BB2022.webp"},{"name":"鹿 be free","artist":"尚雯婕","url":"music/鹿 be free.mp3","cover":"/imgs/%E9%B9%BF%20be%20free.webp"},{"name":"像小时候一样","artist":"郁可唯","url":"music/像小时候一样.mp3","cover":"/imgs/%E5%83%8F%E5%B0%8F%E6%97%B6%E5%80%99%E4%B8%80%E6%A0%B7.jpg"}]`)
   const ap = new APlayer({
     container: document.querySelector('#aplayer'),
     audio: musics,
