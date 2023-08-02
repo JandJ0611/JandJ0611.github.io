@@ -332,11 +332,11 @@
       </p>
       <p class="main-left--subtitle">
         <span>最近动态：</span>
-        <span>4天前</span>
+        <span>3周前</span>
       </p>
       <p class="main-left--subtitle">
         <span>上线时间：</span>
-        <span>9天</span>
+        <span>29天</span>
       </p>
     </div>
   </div>
@@ -552,7 +552,7 @@
   }
 
   setOperateItem()
-  const musics = JSON.parse(`[{"name":"漠河舞厅","artist":"柳爽","url":"music/漠河舞厅.mp3","cover":"/imgs/%E6%BC%A0%E6%B2%B3%E8%88%9E%E5%8E%85.jpg"},{"name":"星光","artist":"张靓颖","url":"music/星光.mp3","cover":"/imgs/%E6%98%9F%E5%85%89.jpg"},{"name":"Dream It Possible","artist":"Delacey","url":"music/Dream It Possible.m4a","cover":"/imgs/Dream%20It%20Possible.jpg"},{"name":"我的梦","artist":"张靓颖","url":"music/我的梦.mp3","cover":"/imgs/%E6%88%91%E7%9A%84%E6%A2%A6.jpg"},{"name":"Stay Alive","artist":"José González","url":"music/Stay Alive.m4a","cover":"/imgs/Stay%20Alive.webp"},{"name":"你从未离去","artist":"白挺","url":"music/你从未离去.mp3","cover":"/imgs/%E4%BD%A0%E4%BB%8E%E6%9C%AA%E7%A6%BB%E5%8E%BB.webp"},{"name":"你从未离去（2022新版）","artist":"白挺","url":"music/你从未离去(2022新版).mp3","cover":"/imgs/%E4%BD%A0%E4%BB%8E%E6%9C%AA%E7%A6%BB%E5%8E%BB2022.webp"},{"name":"鹿 be free","artist":"尚雯婕","url":"music/鹿 be free.mp3","cover":"/imgs/%E9%B9%BF%20be%20free.webp"},{"name":"像小时候一样","artist":"郁可唯","url":"music/像小时候一样.mp3","cover":"/imgs/%E5%83%8F%E5%B0%8F%E6%97%B6%E5%80%99%E4%B8%80%E6%A0%B7.jpg"},{"name":"如愿","artist":"王菲","url":"music/如愿.mp3","cover":"/imgs/%E5%A6%82%E6%84%BF.webp"},{"name":"大鱼","artist":"周深","url":"music/大鱼.mp3","cover":"/imgs/%E5%A4%A7%E9%B1%BC.jpg"},{"name":"For Ya","artist":"蒋小呢","url":"music/for ya.m4a","cover":"/imgs/For%20Ya.jpg"}]`)
+  const musics = JSON.parse(`[{"name":"漠河舞厅","artist":"柳爽","url":"music/漠河舞厅.mp3","cover":"/imgs/%E6%BC%A0%E6%B2%B3%E8%88%9E%E5%8E%85.jpg"},{"name":"Wake","artist":"Hillsong Young & Free","url":"music/Wake.mp3","cover":"/imgs/Wake.jpg"},{"name":"星光","artist":"张靓颖","url":"music/星光.mp3","cover":"/imgs/%E6%98%9F%E5%85%89.jpg"},{"name":"Dream It Possible","artist":"Delacey","url":"music/Dream It Possible.m4a","cover":"/imgs/Dream%20It%20Possible.jpg"},{"name":"我的梦","artist":"张靓颖","url":"music/我的梦.mp3","cover":"/imgs/%E6%88%91%E7%9A%84%E6%A2%A6.jpg"},{"name":"Stay Alive","artist":"José González","url":"music/Stay Alive.m4a","cover":"/imgs/Stay%20Alive.webp"},{"name":"你从未离去","artist":"白挺","url":"music/你从未离去.mp3","cover":"/imgs/%E4%BD%A0%E4%BB%8E%E6%9C%AA%E7%A6%BB%E5%8E%BB.webp"},{"name":"你从未离去（2022新版）","artist":"白挺","url":"music/你从未离去(2022新版).mp3","cover":"/imgs/%E4%BD%A0%E4%BB%8E%E6%9C%AA%E7%A6%BB%E5%8E%BB2022.webp"},{"name":"鹿 be free","artist":"尚雯婕","url":"music/鹿 be free.mp3","cover":"/imgs/%E9%B9%BF%20be%20free.webp"},{"name":"像小时候一样","artist":"郁可唯","url":"music/像小时候一样.mp3","cover":"/imgs/%E5%83%8F%E5%B0%8F%E6%97%B6%E5%80%99%E4%B8%80%E6%A0%B7.jpg"},{"name":"如愿","artist":"王菲","url":"music/如愿.mp3","cover":"/imgs/%E5%A6%82%E6%84%BF.webp"},{"name":"大鱼","artist":"周深","url":"music/大鱼.mp3","cover":"/imgs/%E5%A4%A7%E9%B1%BC.jpg"},{"name":"For Ya","artist":"蒋小呢","url":"music/for ya.m4a","cover":"/imgs/For%20Ya.jpg"}]`)
   const ap = new APlayer({
     container: document.querySelector('#aplayer'),
     audio: musics,
