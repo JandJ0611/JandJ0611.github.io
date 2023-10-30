@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>我的生活tools | MY LIFE</title>
+  <title>我的生活大学计算机编程作业 | MY LIFE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" href="/imgs/shortcut-icon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/public.css" />
@@ -16,7 +16,7 @@
 
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <script>
-    document.title = `我的生活tools`
+    document.title = `我的生活大学计算机编程作业`
   </script>
 <meta name="generator" content="Hexo 6.3.0"></head>
 
@@ -344,37 +344,179 @@
       <div id="main-container" class="main-container">
 
 
-  
+  <style>
+pre::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+  background-color:#F5F5F5;
+}
+/*定义滚动条轨道
+内阴影+圆角*/
+pre::-webkit-scrollbar-track {
+  background-color:#F5F5F5;
+}
+/*定义滑块
+内阴影+圆角*/
+pre::-webkit-scrollbar-thumb {
+  background-color: rgb(69, 83, 100);
+}
 
-<div class="tools">
-  <h2 class="tools-title">工具列表...</h2>
-  <ul class="tools-list">
-    
-      <li>
-        <img class="tool-cover" src="/imgs/sky.png" alt="">
-        <div class="tool-info">
-          <div>
-            <p class="tool-title">恋爱计时</p>
-            <p class="tool-intro">PS：源码文件github.com/JandJ0611/Jzt.github.io</p>
+pre:active {
+  background-color: rgb(81, 95, 116);
+}
+</style>
+
+<div class="article-container">
+  <div class="article">
+    <h1 class="article-title">大学计算机编程作业</h1>
+    <div class="article-info">
+      <div class="article-info--item">
+        <div class="article-info--info">
+          
+          <div class="article-info--categories">
+            <span>分类：</span>
+            <a class="category-link" href="/categories/%E4%BD%9C%E4%B8%9A/">作业</a>
           </div>
-          <a class="tool-link" href="https://jandj0611.github.io/Jzt.github.io/" target="_blank">前往使用>></a>
-        </div>
-      </li>
-    
-      <li>
-        <img class="tool-cover" src="/imgs/2.jpg" alt="">
-        <div class="tool-info">
-          <div>
-            <p class="tool-title">毕业去向</p>
-            <p class="tool-intro">2班</p>
+          
+          
+          <div class="article-info--tags">
+            <span>标签：</span>
+            <a class="tag-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a>
           </div>
-          <a class="tool-link" href="https://jandj0611.github.io/hsez-2.github.io/" target="_blank">前往使用>></a>
+          
+          <p class="article-info--date">日期：2023-10-30 22:43:56</p>
         </div>
-      </li>
+        <img src="/imgs/default-cover.webp" alt="" class="article-cover">
+      </div>
+    </div>
+    <article class="article-content">
+      <h1 id="大学计算机编程作业"><a href="#大学计算机编程作业" class="headerlink" title="大学计算机编程作业"></a>大学计算机编程作业</h1><h2 id="第7周"><a href="#第7周" class="headerlink" title="第7周"></a>第7周</h2><ul>
+<li><h3 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h3></li>
+<li>请输入一个不含0的8位的十进制整数，编写程序取出该整数的中间4位数，分别输出取出的这4位数以及该4位数加上1024的得数。输入：一个整数。输出：两个整数，用空格分隔。</li>
+</ul>
+<p>#define _CRT_SECURE_NO_WARNINGS<br>#include&lt;stdio.h&gt;<br>int main()<br>{<br>    int x;<br>    scanf(“%d”, &amp;x);<br>    x &#x3D; x &#x2F; 100;<br>    x &#x3D; x % 10000;<br>    printf(“%d “, x);<br>    x &#x3D; x + 1024;<br>    printf(“%d\n”, x);<br>    return 0;<br>}</p>
+<ul>
+<li><h3 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h3></li>
+<li>企业发放的奖金根据利润提成。利润低于或等于10万元时，奖金可提10%；利润高于10万元，低于等于20万元时，低于10万元的部分按10%提成，高于10万元的部分，可提成8%；20万到40万之间时，高于20万元的部分，可提成5%；40万到60万之间时高于 40万元的部分，可提成3%；60万到100万之间时，高于60万元的部分，可提成2%，高于100万元时，超过100万元的部分按1%提成。编写程序，输入用户当月利润，输出发放奖金总数。输入：一个整数。输出：一个整数。</li>
+</ul>
+<p>#define _CRT_SECURE_NO_WARNINGS<br>#include &lt;stdio.h&gt;<br>int main()<br>{<br>    int x;<br>    scanf(“%d”, &amp;x);<br>    if (x &lt;&#x3D; 100000)<br>        x &#x3D; 0.1 * x;<br>    else<br>        if (100000 &lt; x&amp;&amp;x &lt;&#x3D; 200000)<br>            x &#x3D; 10000 + (x - 100000) * 0.08;<br>    else<br>        if (200000 &lt; x&amp;&amp;x &lt;&#x3D; 400000)<br>            x &#x3D; 18000 + (x - 200000) * 0.05;<br>    else<br>        if (400000 &lt; x&amp;&amp;x &lt;&#x3D; 600000)<br>            x &#x3D; 28000 + (x - 400000) * 0.03;<br>    else<br>        if (600000 &lt; x&amp;&amp;x &lt;&#x3D; 1000000)<br>            x &#x3D; 34000 + (x - 600000) * 0.02;<br>    else<br>        if (1000000 &lt; x)<br>            x &#x3D; 42000 + (x - 1000000) * 0.01;<br>    printf(“%d\n”, x);<br>    return 0;<br>}</p>
+<ul>
+<li><h3 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h3></li>
+<li>输入整数a和b，若a<em>a+b</em>b大于等于100，则输出a<em>a+b</em>b百位及以上的数字，否则输出a<em>a+b</em>b。例如，输入25 25 ，它们的平方和为625+625&#x3D;1250，百位及以上数为12.输入：两个整数，中间用空格隔开   输出：一个整数。</li>
+</ul>
+<p>#define _CRT_SECURE_NO_WARNINGS<br>#include &lt;stdio.h&gt;<br>int main()<br>{<br>    int a, b, x;<br>    scanf(“%d%d”, &amp;a, &amp;b);<br>    x &#x3D; a * a + b * b;<br>    if (x &gt;&#x3D; 100)<br>        x &#x3D; x &#x2F; 100;<br>    else<br>        x &#x3D; x;<br>    printf(“%d\n”, x);<br>    return 0;<br>}</p>
+<ul>
+<li><h3 id="第四题"><a href="#第四题" class="headerlink" title="第四题"></a>第四题</h3></li>
+<li>从键盘输入任意3个整数，然后输出这3个数的平均值。输入：3个整数，用空格分隔。输出：平均数</li>
+</ul>
+<p>#define _CRT_SECURE_NO_WARNINGS<br>#include &lt;stdio.h&gt;<br>int main()<br>{<br>    int a, b, c;<br>    double x;<br>    scanf(“%d%d%d”, &amp;a, &amp;b, &amp;c);<br>    x &#x3D; (double)(a + b + c) &#x2F; 3;<br>    printf(“%g”, x);<br>    return 0;<br>}</p>
+<ul>
+<li><h3 id="第五题"><a href="#第五题" class="headerlink" title="第五题"></a>第五题</h3></li>
+<li>编写程序，输入任意的3个小数；将这3个小数相加，将相加的结果以及按四舍五入方法转换成整数后的结果显示输出。输入：3个小数，空格分隔；输出：和，四舍五入后的整数，1行显示，空格分隔。</li>
+</ul>
+<p>#define _CRT_SECURE_NO_WARNINGS<br>#include &lt;stdio.h&gt;<br>int main()<br>{<br>    float a, b, c, x;<br>    scanf(“%f%f%f”, &amp;a, &amp;b, &amp;c);<br>    x &#x3D; (double)(a + b + c);<br>    printf(“%g “, x);<br>    x &#x3D; (int)(x + 0.5);<br>    x &#x3D; x &#x2F; 1;<br>    printf(“%g\n”, x);<br>    return 0;<br>}</p>
+<ul>
+<li><h3 id="第六题"><a href="#第六题" class="headerlink" title="第六题"></a>第六题</h3></li>
+<li>输入2个整数，求：和，差，积，商。输入：2个整数（第二个数是非零整数）  输出：4个整数，依次为和、差、积和商，数据间用空格分隔。</li>
+</ul>
+<p>#define _CRT_SECURE_NO_WARNINGS<br>#include &lt;stdio.h&gt;<br>int main()<br>{<br>    int a, b;<br>    scanf(“%d%d”, &amp;a, &amp;b);<br>    printf(“%d “, a + b);<br>    printf(“%d “, a - b);<br>    printf(“%d “, a * b);<br>    printf(“%d\n”, a &#x2F; b);<br>    return 0;<br>}</p>
+<ul>
+<li><h3 id="第七题"><a href="#第七题" class="headerlink" title="第七题"></a>第七题</h3></li>
+<li>输入总秒数，转换为相应的时、分、秒。提示：在输出时，分和秒占2位，不足补0输入：整数。输出：时分秒，整数，西文冒号分隔。</li>
+</ul>
+<p>#define _CRT_SECURE_NO_WARNINGS<br>#include &lt;stdio.h&gt;<br>int main()<br>{<br>    int x,h,m,s;<br>    scanf(“%d”, &amp;x);<br>    h &#x3D; (int)x &#x2F; 3600;<br>    m &#x3D; (int)x % 3600 &#x2F; 60;<br>    s &#x3D; (int)x % 3600 % 60;<br>    printf(“%d:%.2d:%.2d\n”, h, m, s);<br>    return 0;<br>}</p>
+<ul>
+<li><h3 id="第八题"><a href="#第八题" class="headerlink" title="第八题"></a>第八题</h3></li>
+<li>计算银行存款本息。输入存款金额money（单位：元），存期years，年利率rate，计算到期存款本息（保留2位小数）。计算公式如下：sum&#x3D;money*(1+rate)**years                         输入:存款金额，存期，年利率。均为浮点数，且用逗号分隔。输出：存款本息（保留2位小数）</li>
+</ul>
+<p>#define _CRT_SECURE_NO_WARNINGS<br>#include &lt;stdio.h&gt;<br>#include &lt;math.h&gt;<br>int main()<br>{<br>    double money, years, rate, x, w;<br>    scanf(“%lf,%lf,%lf”, &amp;money, &amp;years, &amp;rate);<br>    w &#x3D; pow(1 + rate, years);<br>    x &#x3D; money * w;<br>    printf(“%0.2lf”, x);<br>    return 0;<br>}</p>
+<ul>
+<li><h3 id="第九题"><a href="#第九题" class="headerlink" title="第九题"></a>第九题</h3></li>
+<li>输入一个大写英文字母， 输出与其相邻的字母串（将字母A-Z看作是收尾相接的环状排列）。输入: 大写英文字母。输出:该字母前面的字母，该字母，该字母后面的字母。（三字母间无间隔）</li>
+</ul>
+<p>#define _CRT_SECURE_NO_WARNINGS<br>#include &lt;stdio.h&gt;<br>#include &lt;math.h&gt;<br>int main()<br>{<br>    char ch, ch1, ch2;<br>    scanf(“%c”, &amp;ch);<br>    if (ch &lt;&#x3D; 65)<br>        ch1 &#x3D; 90, ch2 &#x3D; 66;<br>    else<br>        if (ch &gt;&#x3D; 90)<br>        {ch1 &#x3D; 89, ch2 &#x3D; 65; }<br>    else<br>        if (ch &gt; 65 &amp;&amp; ch &lt; 90)<br>        {ch1 &#x3D; ch - 1;<br>        ch2 &#x3D; ch + 1; }<br>    printf(“%c%c%c”, ch1, ch, ch2);<br>    return 0;<br>}</p>
+<ul>
+<li><h3 id="第十题"><a href="#第十题" class="headerlink" title="第十题"></a>第十题</h3></li>
+<li>输入由4个字母构成的英文单词，按如下格式输出字母，该字母的ASCII码以及该字母的后继字符。每行输出数据之间用一个空格分隔。输入: 单词。输出：共4行，每行输出字母，该字母的ASCII码，该字母后继字符（空格分隔，每行的最后没有空格）</li>
+</ul>
+<p>#define _CRT_SECURE_NO_WARNINGS<br>#include &lt;stdio.h&gt;<br>#include &lt;math.h&gt;<br>int main()<br>{<br>    char ch1, ch2, ch3, ch4;<br>    scanf(“%c%c%c%c”, &amp;ch1, &amp;ch2, &amp;ch3, &amp;ch4);<br>    printf(“%c %d %c\n”, ch1, ch1, ch1 + 1);<br>    printf(“%c %d %c\n”, ch2, ch2, ch2 + 1);<br>    printf(“%c %d %c\n”, ch3, ch3, ch3 + 1);<br>    printf(“%c %d %c\n”, ch4, ch4, ch4 + 1);<br>    return 0;<br>}</p>
+
+    </article>
     
-  </ul>
+    <div class="read-nums">
+      <!-- id 将作为查询条件 -->
+      <span id="2023/10/30/jsj-homework/" class="leancloud_visitors" data-flag-title="Your Article Title">
+        <em class="post-meta-item-text">浏览量</em>
+        <i class="leancloud-visitors-count"></i>
+      </span>
+    </div>
+    <div class="comments-intro">
+      <h2>评论区</h2>
+      <p>欢迎你留下宝贵的意见，昵称输入QQ号会显示QQ头像哦~</p>
+    </div>
+    <div id="vcomments" class="vcomments"></div>
+    
+  </div>
+  <div class="article-catelogue">
+    <div class="article-catelogue--wrapper">
+      <div class="catelogue catelogue-1">
+        <h3>目录</h3>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E7%A8%8B%E4%BD%9C%E4%B8%9A"><span class="toc-number">1.</span> <span class="toc-text">大学计算机编程作业</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC7%E5%91%A8"><span class="toc-number">1.1.</span> <span class="toc-text">第7周</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%A2%98"><span class="toc-number">1.1.1.</span> <span class="toc-text">第一题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%A2%98"><span class="toc-number">1.1.2.</span> <span class="toc-text">第二题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E9%A2%98"><span class="toc-number">1.1.3.</span> <span class="toc-text">第三题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E9%A2%98"><span class="toc-number">1.1.4.</span> <span class="toc-text">第四题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E9%A2%98"><span class="toc-number">1.1.5.</span> <span class="toc-text">第五题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E9%A2%98"><span class="toc-number">1.1.6.</span> <span class="toc-text">第六题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E9%A2%98"><span class="toc-number">1.1.7.</span> <span class="toc-text">第七题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E9%A2%98"><span class="toc-number">1.1.8.</span> <span class="toc-text">第八题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E9%A2%98"><span class="toc-number">1.1.9.</span> <span class="toc-text">第九题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E9%A2%98"><span class="toc-number">1.1.10.</span> <span class="toc-text">第十题</span></a></li></ol></li></ol></li></ol>
+      </div>
+      
+        <div class="catelogue catelogue-2">
+           
+          
+            <p>
+              <span>下一篇</span>
+              <a href="/2023/07/09/长恨歌/">长恨歌</a>
+            </p>
+          
+        </div>
+      
+    </div>
+  </div>
 </div>
 
+<script src="http://cdn.yangxiang.cc/prism.js"></script>
+
+<script>
+  // var定义，避免pjax重新进来造成的重复声明错误
+  var config = JSON.parse('{"enable":true,"appId":"Pf8zCXGEH1qsprnWfikVVujL-gzGzoHsz","appKey":"qOqoiUHhH1TGtLRUYURkLRQX","placeholder":"请留下你宝贵的意见吧~","meta":["nick"],"recordIP":true,"visitor":true,"enableQQ":true}')
+  new Valine({
+    el: '#vcomments',
+    appId: config.appId,
+    appKey: config.appKey,
+    placeholder: config.placeholder,
+    meta: config.meta,
+    recordIP: config.recordIP,
+    visitor: config.visitor,
+    enableQQ: config.enableQQ,
+    path: '2023/10/30/jsj-homework/'
+  })
+</script>
+
+
+<script>
+  $(document).on('pjax:complete', function() {
+    const tocs = document.querySelector('.toc')
+    const links = tocs ? tocs.querySelectorAll('a') : []
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        const href = decodeURIComponent(e.href)
+        href.search(/#(.*)/)
+        const id = RegExp.$1
+        const target = document.querySelector('#' + id)
+        const top = target.offsetTop
+        document.documentElement.scrollTo({
+          top: top - 100,
+          behavior: 'smooth'
+        })
+        e.preventDefault()
+      })
+    })
+  })
+</script> 
 
 </div>
       <div class="main-right-wrapper"><div class="main-right">

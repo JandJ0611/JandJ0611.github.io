@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>我的生活tools | MY LIFE</title>
+  <title>我的生活小站首页 | MY LIFE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" href="/imgs/shortcut-icon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/public.css" />
@@ -16,7 +16,7 @@
 
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <script>
-    document.title = `我的生活tools`
+    document.title = `我的生活小站首页`
   </script>
 <meta name="generator" content="Hexo 6.3.0"></head>
 
@@ -343,39 +343,105 @@
 </div></div>
       <div id="main-container" class="main-container">
 
-
-  
-
-<div class="tools">
-  <h2 class="tools-title">工具列表...</h2>
-  <ul class="tools-list">
+<div class="index">
+  <div class="index-left">
     
-      <li>
-        <img class="tool-cover" src="/imgs/sky.png" alt="">
-        <div class="tool-info">
-          <div>
-            <p class="tool-title">恋爱计时</p>
-            <p class="tool-intro">PS：源码文件github.com/JandJ0611/Jzt.github.io</p>
-          </div>
-          <a class="tool-link" href="https://jandj0611.github.io/Jzt.github.io/" target="_blank">前往使用>></a>
+      <div class="index-article">
+        <!-- <img class="index-article--cover" src="/imgs/default-cover.webp" alt=""> -->
+        <div class="index-article--box">
+          <img class="index-article--cover" data-cover="imgs/default-cover.webp" alt="">
         </div>
-      </li>
-    
-      <li>
-        <img class="tool-cover" src="/imgs/2.jpg" alt="">
-        <div class="tool-info">
+        <div class="index-article--content">
+          <a href="/2023/10/30/jsj-homework/">大学计算机编程作业 </a>
           <div>
-            <p class="tool-title">毕业去向</p>
-            <p class="tool-intro">2班</p>
+            
+              <p>
+                <a class="post-category-link" href="/categories/%E4%BD%9C%E4%B8%9A/">作业</a>
+              </p>
+            
+            
+              <p>
+                <a class="-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a>
+              </p>
+            
           </div>
-          <a class="tool-link" href="https://jandj0611.github.io/hsez-2.github.io/" target="_blank">前往使用>></a>
+          <div class="bg"></div>
         </div>
-      </li>
+      </div>
     
-  </ul>
+  </div>
+  <div class="index-center">
+    
+  </div>
+  <div class="index-right">
+    <div class="index-right-wrapper">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BD%9C%E4%B8%9A/">作业</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8F%A4%E8%AF%97%E6%96%87/">古诗文</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E4%BE%BF/">随便</a></li></ul>
+      <ul class="tags" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%9D%E5%94%90/" rel="tag">初唐</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%AD%E5%94%90/" rel="tag">中唐</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">2023年10月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">2023年07月</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
 </div>
 
 
+<script>
+  var allImgBoxs = document.querySelectorAll('.index-article--box');
+  var windowHeight = window.innerHeight;
+  var boxs = Array.from(allImgBoxs);
+  var timer = null;
+  boxs.forEach((box, idx) => {
+    if (!window.loadImageSet || !window.loadImageSet.includes(idx)) {
+      box.classList.add('img-loading');
+    } else {
+      const imgDom = box.querySelector('img');
+      imgDom.src = imgDom.dataset.cover;
+    }
+  });
+
+  function scrollFn() {
+    if (timer) {
+      return;
+    }
+    timer = setTimeout(() => {
+      loadImage();
+      timer = null;
+    }, 100)
+  }
+
+  if (!window.loadedImage) {
+    document.addEventListener('scroll', scrollFn);
+  }
+
+  function loadImage() {
+    const doc = document.documentElement;
+    const scrollTop = doc.scrollTop;
+    if (boxs.every(box => box.loadedImage)) {
+      document.removeEventListener('scroll', scrollFn);
+      window.loadedImage = 1;
+      return;
+    }
+    boxs.forEach((box, idx) => {
+      if (box.loadedImage) {
+        return;
+      }
+      if (box.getBoundingClientRect().top < windowHeight) {
+        const imgDom = box.querySelector('img');
+        imgDom.src = imgDom.dataset.cover;
+        imgDom.onload = () => {
+          box.classList.remove('img-loading')
+          box.loadedImage = true;
+          if (window.loadImageSet) {
+            window.loadImageSet.push(idx);
+          } else {
+            window.loadImageSet = [];
+            window.loadImageSet.push(idx);
+          }
+        }
+      }
+    });
+  }
+
+  window.loadImageFn = loadImage;
+</script>
 </div>
       <div class="main-right-wrapper"><div class="main-right">
   <div class="main-right--board">
